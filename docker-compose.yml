@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  tarantool:
+    build:
+      context: ./tarantool
+      dockerfile: Dockerfile
+    command: tarantool /opt/tarantool/app.lua
+    ports:
+      - 3301:3301
+
+  redis:
+    image: redis:latest
+    command: redis-server --appendonly no
+    volumes:
+      - /tmp/redis:/data
+    ports:
+      - 6379:6379
+
+  generator:
+    build:
+      context: ./generator
+      dockerfile: Dockerfile
+    command: php index.php
+    environment:
+      REDIS_HOST: "redis"
+      TARANTOOL_HOST: "tarantool"
+      MAX_COUNT_USERS: 10000
+      MIN_COUNT_EVENTS: 10
+      MAX_COUNT_EVENTS: 100
+    depends_on:
+      - redis
+      - tarantool
+
+  listener:
+    build:
+      context: ./listener
+      dockerfile: Dockerfile
+    command: php index.php
+    environment:
+      REDIS_HOST: "redis"
+      TARANTOOL_HOST: "tarantool"
+    depends_on:
+      - redis
+      - tarantool

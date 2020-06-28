@@ -1,0 +1,246 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "4aa6d16306f3ebd0e37dd8653281dee6",
+    "packages": [
+        {
+            "name": "predis/predis",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Predis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
+                }
+            ],
+            "description": "Flexible and feature-complete Redis client for PHP and HHVM",
+            "homepage": "http://github.com/nrk/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "time": "2016-06-16T16:22:20+00:00"
+        },
+        {
+            "name": "rybakit/msgpack",
+            "version": "v0.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rybakit/msgpack.php.git",
+                "reference": "8ad636b575619aa34eee8b70c564de4717b5cb41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rybakit/msgpack.php/zipball/8ad636b575619aa34eee8b70c564de4717b5cb41",
+                "reference": "8ad636b575619aa34eee8b70c564de4717b5cb41",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.1"
+            },
+            "require-dev": {
+                "ext-decimal": "*",
+                "ext-gmp": "*",
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "phpunit/phpunit": "^7.1|^8.0"
+            },
+            "suggest": {
+                "ext-decimal": "For converting overflowed integers to Decimal objects",
+                "ext-gmp": "For converting overflowed integers to GMP objects"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MessagePack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eugene Leonovich",
+                    "email": "gen.work@gmail.com"
+                }
+            ],
+            "description": "A pure PHP implementation of the MessagePack serialization format.",
+            "keywords": [
+                "messagepack",
+                "msgpack",
+                "pure",
+                "streaming"
+            ],
+            "time": "2020-01-27T23:31:20+00:00"
+        },
+        {
+            "name": "tarantool/client",
+            "version": "v0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantool-php/client.git",
+                "reference": "8c45feebd39a2d41a38f28c1fea56961af24842b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantool-php/client/zipball/8c45feebd39a2d41a38f28c1fea56961af24842b",
+                "reference": "8c45feebd39a2d41a38f28c1fea56961af24842b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "ext-decimal": "*",
+                "ext-json": "*",
+                "ext-msgpack": "*",
+                "ext-sockets": "*",
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "monolog/monolog": "^1.24|^2.0",
+                "psr/log": "^1.1",
+                "rybakit/msgpack": "^0.7",
+                "symfony/uid": "^5.1",
+                "tarantool/phpunit-extras": "^0.1",
+                "vimeo/psalm": "^3.9"
+            },
+            "suggest": {
+                "ext-decimal": "For using decimals with Tarantool 2.3+",
+                "ext-msgpack": "For using Pecl packer",
+                "psr/log": "For using LoggingMiddleware",
+                "rybakit/msgpack": "For using Pure packer (version 0.7 or above is required)",
+                "symfony/uid": "For using UUIDs with Tarantool 2.4+"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tarantool\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eugene Leonovich",
+                    "email": "gen.work@gmail.com"
+                }
+            ],
+            "description": "PHP client for Tarantool.",
+            "keywords": [
+                "client",
+                "nosql",
+                "pure",
+                "tarantool"
+            ],
+            "time": "2020-06-14T21:05:44+00:00"
+        },
+        {
+            "name": "tarantool/queue",
+            "version": "v0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantool-php/queue.git",
+                "reference": "d98e2c9b35ede33e65beb9ec5c2fff7d5d0967f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantool-php/queue/zipball/d98e2c9b35ede33e65beb9ec5c2fff7d5d0967f4",
+                "reference": "d98e2c9b35ede33e65beb9ec5c2fff7d5d0967f4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "phpunit/phpunit": "^7.4",
+                "rybakit/msgpack": "^0.5.4",
+                "tarantool/client": "^0.5.0"
+            },
+            "suggest": {
+                "ext-tarantool": "For using pecl extension",
+                "tarantool/client": "For using pure client"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tarantool\\Queue\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eugene Leonovich",
+                    "email": "gen.work@gmail.com"
+                }
+            ],
+            "description": "PHP bindings for Tarantool Queue.",
+            "keywords": [
+                "delayed",
+                "job",
+                "nosql",
+                "priority",
+                "queue",
+                "schedule",
+                "tarantool",
+                "task",
+                "ttl",
+                "ttr",
+                "worker"
+            ],
+            "time": "2019-05-18T15:49:58+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

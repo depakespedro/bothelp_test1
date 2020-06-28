@@ -1,0 +1,15 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Interfaces\\": "interfaces",
+            "Managers\\": "managers"
+        }
+    },
+
+    "require": {
+        "tarantool/queue": "^0.8.0",
+        "tarantool/client": "^0.8.0",
+        "rybakit/msgpack": "^0.7.0",
+        "predis/predis": "^1.1"
+    }
+}
